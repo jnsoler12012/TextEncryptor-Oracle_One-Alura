@@ -1,0 +1,63 @@
+
+.noDisplay{
+    display: none !important;
+}
+
+
+/* Button Styled */
+
+.fullSizedButton {
+    width: 100% !important;
+}
+
+.halfSizeButton {
+    width: 48% !important;
+}
+
+.filledButton {
+    background-color: var(--mainColor300);
+    border: none;
+    color: var(--white);
+}
+
+.filledButton:hover {
+    background-color: var(--mainColor400);
+}
+
+.filledButton:active {
+    background-color: var(--mainColor500);
+}
+
+
+
+.unfilledButton {
+    background-color: var(--white);
+
+    color: var(--mainColor300);
+    border-color: var(--mainColor300);
+    border-width: 0.12rem;
+    border-style: solid;
+}
+
+.unfilledButton:hover {
+    background-color: var(--secondaryColor200);
+}
+
+.unfilledButton:active {
+    background-color: var(--secondaryColor300);
+}
+
+
+
+.styledButton {
+    min-height: 3.5rem;
+    width: 100%;
+
+    font-weight: 400;
+    font-size: 1rem;
+
+    border-radius: 1.1rem;
+}
+
+
+
