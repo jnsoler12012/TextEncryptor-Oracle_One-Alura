@@ -55,6 +55,7 @@ body {
     font-style: normal;
     font-optical-sizing: auto;
 
+    background-color: var(--secondaryColor100);
 }
 
 /* - Main Frame */
@@ -74,7 +75,7 @@ body {
 /* -- displayer Module */
 
 #displayerModule {
-    background-color: var(--secondaryColor100);
+
 
     width: 100%;
     height: 96.5%;
