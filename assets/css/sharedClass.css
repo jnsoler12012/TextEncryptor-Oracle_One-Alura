@@ -1,5 +1,4 @@
-
-.noDisplay{
+.noDisplay {
     display: none !important;
 }
 
@@ -61,3 +60,59 @@
 
 
 
+/* no select prop */
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently 
+                                    supported by Chrome and Opera */
+}
+
+/* BUZZ EFFECT FOR WARNING*/
+@keyframes buzz {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(5px);
+    }
+}
+
+
+.buzz-effect {
+    animation: buzz 0.7s;
+}
+
+.red-effect {
+    color: red !important;
+    transition: color 0.2s ease-out !important;
+}
+
+.red-effect img {
+    filter: hue-rotate(0deg) brightness(0.5) !important;
+    transition: filter 0.7s ease-in-out;
+}

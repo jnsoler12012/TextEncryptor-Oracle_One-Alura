@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/css/sharedClass.css">
     <link rel="stylesheet" href="./assets/css/scrollbarCustom.css">
 
-    <script src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
             <div id="inputTextComponent">
                 <div id="inputTextWrapper">
 
-                    <span class="textarea" role="textbox" contenteditable></span>
+                    <span id="inputTextElement" class="textarea" role="textbox" contenteditable></span>
 
                     <!-- <textarea id="inputTextElement" placeholder="Ingrese el texto aqui"></textarea> -->
 
@@ -42,15 +42,14 @@
                         <p id="statusTextWarningElement">Solo letras minúsculas y sin acentos</p>
                     </div>
                     <div id="inputSubmitHolder">
-                        <button class=" filledButton styledButton  ">Encriptar</button>
-                        <button class=" unfilledButton styledButton  ">Desencriptar</button>
+                        <button id="inputTextEncryptButton" class=" filledButton styledButton  ">Encriptar</button>
+                        <button id="inputTextDecryptButton" class=" unfilledButton styledButton  ">Desencriptar</button>
                     </div>
                 </div>
             </div>
 
             <div id="outputTextComponent">
                 <div id="outputTextWrapper">
-
                     <img id="outputNotFoundImageElement" class="">
 
                     <div id="outputNotFoundTextContainer" class="">
@@ -58,10 +57,9 @@
                         <p class="TextElement">Ingresa el texto que desees encriptar o desencriptar.</p>
                     </div>
 
-                    <div id="outputTextElement" class="noDisplay"></div>
-
-
-                    <button class="fullSizedButton unfilledButton styledButton noDisplay">Copiar</button>
+                    <div id="outputTextElement" class="noDisplay noselect"></div>
+                    <button id="outputTextCopyButton"
+                        class="fullSizedButton unfilledButton styledButton noDisplay">Copiar</button>
                 </div>
 
 
@@ -77,7 +75,6 @@
             </a>
         </footer>
     </div>
-
 </body>
 
 </html>
