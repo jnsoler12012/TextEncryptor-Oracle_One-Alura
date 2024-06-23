@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/sharedClass.css">
+    <link rel="stylesheet" href="./assets/css/scrollbarCustom.css">
 
     <script src="./scripts/main.js"></script>
 </head>
@@ -31,7 +32,10 @@
             </header>
             <div id="inputTextComponent">
                 <div id="inputTextWrapper">
-                    <textarea id="inputTextElement" placeholder="Ingrese el texto aqui"></textarea>
+
+                    <span class="textarea" role="textbox" contenteditable></span>
+
+                    <!-- <textarea id="inputTextElement" placeholder="Ingrese el texto aqui"></textarea> -->
 
                     <div id="inputTextWarningHolder">
                         <img id="iconTextWarningElement">
@@ -63,13 +67,17 @@
 
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id sapiente blanditiis repellat
                         qui ullam dicta soluta, voluptatem perferendis eveniet ipsam maiores provident ea magnam.
-                        Error necessitatibus maiores eveniet illum.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id sapiente blanditiis repellat
+                        Error necessitatibus maiores eveniet illum.Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Ut id sapiente blanditiis repellat
                         qui ullam dicta soluta, voluptatem perferendis eveniet ipsam maiores provident ea magnam.
-                        Error necessitatibus maiores eveniet illum.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id sapiente blanditiis repellat
+                        Error necessitatibus maiores eveniet illum.Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Ut id sapiente blanditiis repellat
                         qui ullam dicta soluta, voluptatem perferendis eveniet ipsam maiores provident ea magnam.
-                        Error necessitatibus maiores eveniet illum.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id sapiente blanditiis repellat
+                        Error necessitatibus maiores eveniet illum.Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Ut id sapiente blanditiis repellat
                         qui ullam dicta soluta, voluptatem perferendis eveniet ipsam maiores provident ea magnam.
-                        Error necessitatibus maiores eveniet illum.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut id sapiente blanditiis repellat
+                        Error necessitatibus maiores eveniet illum.Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Ut id sapiente blanditiis repellat
                         qui ullam dicta soluta, voluptatem perferendis eveniet ipsam maiores provident ea magnam.
                         Error necessitatibus maiores eveniet illum.
 
@@ -85,7 +93,12 @@
         </div>
 
         <footer id="footerModule">
-            footer
+            <a id="footerTextElement">
+                © 2024 Nicolas Soler
+            </a>
+            <a id="iconLinkedInWrapper" href="">
+                <img id="iconLinkedInElement">
+            </a>
         </footer>
     </div>
 

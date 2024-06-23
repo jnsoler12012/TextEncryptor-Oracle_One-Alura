@@ -76,7 +76,7 @@ body {
     background-color: rgb(255, 85, 93);
 
     width: 100%;
-    height: 97.5%;
+    height: 96.5%;
     display: flex;
 
     flex-direction: row;
@@ -177,8 +177,7 @@ body {
 
 /* ----- inputText Element */
 
-#inputTextElement {
-    /* background: transparent; */
+.textarea {
     background: rgb(255, 167, 52);
 
     border: none;
@@ -186,31 +185,32 @@ body {
     flex: 1;
     padding: 1%;
     margin: 0;
-    width: 100%;
-    min-height: 33rem;
-    resize: none;
-    overflow: auto;
+    height: auto;
     white-space: pre-wrap;
 
-
+    display: block;
+    width: 100%;
+    overflow: auto;
+    resize: none;
+    min-height: 11rem;
 
     box-sizing: border-box;
-    font-family: inherit;
-    line-height: inherit;
+    line-height: 2.5rem;
 
     font-size: 2rem;
     color: var(--mainColor300);
+
 }
 
-#inputTextElement::placeholder {
+.textarea[contenteditable]:empty::before {
+    content: "Ingrese el texto aqui";
     color: var(--mainColor300);
 }
 
-#inputTextElement:focus-visible {
+.textarea:focus-visible {
     border: none;
     outline: none;
 }
-
 
 /* ----- inputTextWarning Holder */
 
@@ -248,6 +248,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    font-weight: 500;
 
     width: 100%;
 
@@ -321,6 +323,7 @@ body {
     font-size: 1.5rem;
     color: var(--grayColor400);
     letter-spacing: 0.03rem;
+    line-height: 1.8rem;
 }
 
 
@@ -358,6 +361,7 @@ body {
     font-size: 1.5rem;
     text-align: center;
     line-height: 120%;
+    font-weight: 700;
 
     color: var(--grayColor500);
 }
@@ -386,12 +390,44 @@ body {
 /* -- footer Module */
 
 #footerModule {
-    background-color: rgb(0, 48, 204);
+    background-color: var(--secondaryColor400);
 
     width: 100%;
-    height: 2.5%;
+    height: 3.5%;
     display: flex;
+    justify-content: space-around;
+}
 
+
+
+/* ----- footerText Element */
+#footerTextElement {
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 600;
+    font-variation-settings: "slnt" -10;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ----- iconLinkedIn Wrapper */
+#iconLinkedInWrapper {
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+
+/* ----- iconLinkedIn Element */
+
+#iconLinkedInElement {
+    content: url('../svg/githubLogo.svg');
+    height: 100%;
+    width: auto;
 }
 
 
@@ -410,7 +446,7 @@ body {
 
     #displayerModule {
         width: 100%;
-        height: 97.5%;
+        height: auto;
         display: flex;
         flex-direction: column;
     }
@@ -427,7 +463,7 @@ body {
 
 
     #iconCompanyWrapper {
-        width: 5.04%;
+        width: 8.04%;
         display: table;
         height: 0 !important;
     }
@@ -439,7 +475,7 @@ body {
 
 
     #iconPartnerWrapper {
-        width: 8.04%;
+        width: 12.04%;
         height: 100%;
     }
 
@@ -453,12 +489,13 @@ body {
 
 
     #inputTextComponent {
+        height: 100%;
         width: 89.58%;
         padding: 8% 5.21% 5.03% 5.21%;
     }
 
     #inputTextElement {
-        min-height: 11rem;
+        min-height: 12rem;
     }
 
 
@@ -470,7 +507,7 @@ body {
 
 
 
-    #inputSubmitHolder{
+    #inputSubmitHolder {
         flex-direction: column;
         row-gap: 0.7rem;
     }
@@ -478,23 +515,20 @@ body {
 
 
     #outputTextComponent {
-        height: 100%;
+        height: auto;
         width: 89.58%;
         padding: 5.21%;
     }
 
     #outputTextWrapper {
-        padding: 3%;
-        height: 0;
-        min-height: -moz-available;
-        /* WebKit-based browsers will ignore this. */
-        min-height: -webkit-fill-available;
-        /* Mozilla-based browsers will ignore this. */
-        min-height: fill-available;
+        height: auto;
+
+        gap: 2.5rem;
     }
 
     #outputTextElement {
-        height: 100%;
+        height: auto;
+        overflow: hidden;
     }
 
     #outputNotFoundImageElement {
@@ -518,4 +552,29 @@ body {
     PHONE SIZE
 */
 
-@media only screen and (max-width: 375px) {}
+@media only screen and (max-width: 375px) {
+
+
+    #headerComponent {
+        padding: 6.39% 4.26%;
+        width: 91.48%;
+    }
+
+    #inputTextComponent {
+        width: 91.48%;
+        padding: 8% 4.26% 5.03% 4.26%;
+    }
+
+
+    #outputTextComponent {
+        height: auto;
+        width: 91.48%;
+        padding: 4.26%;
+    }
+
+    #outputTextWrapper {
+        height: auto;
+        gap: 1.5rem;
+    }
+
+}
